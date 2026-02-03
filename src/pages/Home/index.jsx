@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Hero from '../../components/Hero';
 import Portfolio from '../../components/Portfolio';
 import Memberships from '../../components/Memberships';
+import Reviews from '../../components/Reviews';
 
 const Home = () => {
   return (
@@ -28,6 +29,9 @@ const Home = () => {
       <div className="h-40 bg-gradient-to-b from-transparent to-brand-deep/50" />
 
       <Memberships />
+
+      {/* Member Testimonials */}
+      <Reviews />
     </div>
   );
 };

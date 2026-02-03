@@ -105,3 +105,17 @@ html.lenis {
   -webkit-text-stroke: 1px rgba(243, 244, 244, 0.2);
   color: transparent;
 }
+
+/* Review Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5F9598;
+  border-radius: 10px;
+}
