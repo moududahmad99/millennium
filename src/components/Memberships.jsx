@@ -102,7 +102,7 @@ const Memberships = () => {
             <div className="h-[1px] w-12 bg-brand-teal" />
             <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE INVESTMENT</span>
           </div>
-          <h2 className="text-6xl md:text-8xl font-display font-black text-white italic tracking-tighter">
+          <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter">
             CHOOSE YOUR <br /> <span className="text-stroke">EVOLUTION</span>
           </h2>
         </div>

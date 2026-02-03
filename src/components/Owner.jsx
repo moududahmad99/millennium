@@ -84,7 +84,7 @@ const Owner = () => {
                 <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE FOUNDER</span>
               </div>
 
-              <h2 className="text-7xl md:text-9xl font-display font-black text-white italic tracking-tighter uppercase leading-[0.8]">
+              <h2 className="text-5xl md:text-9xl font-display font-black text-white italic tracking-tighter uppercase leading-[0.8]">
                 OFACIO <br /> <span className="text-stroke">FALCON</span>
               </h2>
 

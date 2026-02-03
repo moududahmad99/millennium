@@ -59,7 +59,7 @@ const Portfolio = ({ previewOnly = false }) => {
               <div className="h-[1px] w-12 bg-brand-teal" />
               <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">CINEMATIC GALLERY</span>
             </div>
-            <h2 className="text-6xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
               LIVE <br /> <span className="text-stroke">MOMENTUM</span>
             </h2>
           </div>

@@ -40,15 +40,7 @@ function App() {
         <GritLayer />
         <div className="flex flex-col min-h-screen bg-brand-deep text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-teal selection:text-brand-deep">
           <Navbar />
-          <main className="flex-grow min-h-screen relative">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/memberships" element={<Memberships />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
+          <MainContent />
           <Footer />
           <CheckoutModal />
           {/* Tactical Scroll to Top Button */}
@@ -58,5 +50,22 @@ function App() {
     </BookingProvider>
   );
 }
+
+const MainContent = () => {
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
+
+  return (
+    <main className={`flex-grow min-h-screen relative ${isHome ? '' : 'pt-24 md:pt-32'}`}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/memberships" element={<Memberships />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </main>
+  );
+};
 
 export default App;

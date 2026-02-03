@@ -5,7 +5,7 @@ import aboutImg from '../assets/images/Millennium .jpg';
 
 const About = () => {
   return (
-    <div className="bg-[#061E29] pt-32 pb-20 overflow-hidden">
+    <div className="bg-[#061E29] pt-8 pb-20 overflow-hidden">
       {/* Hero Section of About */}
       <section className="relative py-24 px-8 border-b border-white/5">
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -57,7 +57,7 @@ const About = () => {
       </section>
 
       {/* Pillars Section */}
-      <section className="py-40 px-8 relative">
+      <section className="py-20 px-8 relative">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <Pillar
@@ -85,7 +85,7 @@ const About = () => {
       </section>
 
       {/* Philosophy Callout */}
-      <section className="py-40 bg-brand-deep relative border-y border-white/5">
+      <section className="py-20 bg-brand-deep relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#5F9598 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="container mx-auto px-8 max-w-5xl text-center relative z-10">
           <motion.div

@@ -97,7 +97,7 @@ const Reviews = () => {
               <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE SYNDICATE</span>
               <div className="h-[1px] w-12 bg-brand-teal" />
             </div>
-            <h2 className="text-6xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
               MEMBER <br /> <span className="text-stroke">VERDICTS</span>
             </h2>
           </div>
