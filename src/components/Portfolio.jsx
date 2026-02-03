@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Play, X, Maximize2 } from 'lucide-react';
+import { createPortal } from 'react-dom';
 
 // Video Imports
 import vid1 from '../assets/videos/vid1.mp4';
@@ -19,11 +20,14 @@ const Portfolio = ({ previewOnly = false }) => {
   React.useEffect(() => {
     if (activeVideo) {
       document.body.style.overflow = 'hidden';
+      window.lenis?.stop();
     } else {
       document.body.style.overflow = 'unset';
+      window.lenis?.start();
     }
     return () => {
       document.body.style.overflow = 'unset';
+      window.lenis?.start();
     };
   }, [activeVideo]);
 
@@ -89,45 +93,53 @@ const Portfolio = ({ previewOnly = false }) => {
         )}
       </div>
 
-      {/* Video Lightbox */}
-      <AnimatePresence>
-        {activeVideo && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-12 bg-brand-deep/98 backdrop-blur-3xl"
-          >
-            {/* Premium Tactical Close Icon */}
-            <motion.button
-              initial={{ scale: 0, rotate: -90 }}
-              animate={{ scale: 1, rotate: 0 }}
-              onClick={() => setActiveVideo(null)}
-              className="absolute top-8 right-8 z-[210] w-14 h-14 bg-white/5 hover:bg-brand-teal border border-white/10 hover:border-brand-teal transition-all duration-500 rounded-full flex items-center justify-center group"
-            >
-              <X size={28} className="text-white group-hover:text-brand-deep transition-colors" />
-              <div className="absolute inset-0 border border-brand-teal/0 group-hover:border-brand-teal group-hover:scale-125 rounded-full transition-all duration-500" />
-            </motion.button>
-
+      {/* Video Lightbox - Using Portal for Viewport-Absolute Stability */}
+      {typeof document !== 'undefined' && createPortal(
+        <AnimatePresence>
+          {activeVideo && (
             <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              className="relative w-full max-w-6xl aspect-video bg-black shadow-2xl overflow-hidden border border-white/10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              data-lenis-prevent
+              className="fixed inset-0 z-[2000] flex items-center justify-center p-4 md:p-12 bg-black/98 backdrop-blur-3xl"
             >
-              <video
-                src={activeVideo.url}
-                controls
-                autoPlay
-                className="w-full h-full object-contain"
-              />
-              <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent pointer-events-none">
-                <span className="text-brand-teal font-black uppercase tracking-widest text-xs mb-2 block">{activeVideo.category}</span>
-                <h3 className="text-3xl font-display font-black text-white italic uppercase">{activeVideo.title}</h3>
-              </div>
+              {/* Ultra-Visible Exit Control - Fixed to Viewport and ALWAYS visible regardless of scroll */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="fixed top-6 right-6 md:top-12 md:right-12 z-[2100] flex items-center gap-6"
+              >
+                <span className="text-brand-teal font-black text-[12px] uppercase tracking-[0.6em] hidden md:block drop-shadow-2xl">Exit Archive</span>
+                <button
+                  onClick={() => setActiveVideo(null)}
+                  className="w-16 h-16 md:w-20 md:h-20 bg-brand-teal border border-brand-teal shadow-[0_0_60px_rgba(95,149,152,0.6)] rounded-full flex items-center justify-center group active:scale-95 transition-all duration-300"
+                >
+                  <X size={40} className="text-brand-deep transition-transform group-hover:rotate-180 duration-500 scale-110" />
+                </button>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0.9, y: 30 }}
+                animate={{ scale: 1, y: 0 }}
+                className="relative w-full max-w-5xl aspect-video bg-black shadow-[0_0_150px_rgba(0,0,0,1)] overflow-hidden border border-white/5"
+              >
+                <video
+                  src={activeVideo.url}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain"
+                />
+                <div className="absolute bottom-0 left-0 w-full p-12 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none">
+                  <span className="text-brand-teal font-black uppercase tracking-widest text-[10px] mb-4 block">{activeVideo.category}</span>
+                  <h3 className="text-4xl font-display font-black text-white italic uppercase tracking-tighter leading-none">{activeVideo.title}</h3>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 };
@@ -159,7 +171,6 @@ const VideoCard = ({ vid, index, onExpand }) => {
       onClick={onExpand}
     >
       <div className="aspect-square w-full h-full relative overflow-hidden bg-black">
-        {/* Simple play indicator for mobile/initial state */}
         <div className="absolute inset-0 z-20 flex items-center justify-center opacity-40 group-hover:opacity-0 transition-opacity">
           <Play fill="currentColor" size={48} className="text-white/20" />
         </div>
@@ -173,7 +184,6 @@ const VideoCard = ({ vid, index, onExpand }) => {
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110 opacity-60 group-hover:opacity-100"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 z-30 bg-gradient-to-t from-brand-deep via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-8">
           <div className="flex justify-between items-end">
             <div>
@@ -188,7 +198,6 @@ const VideoCard = ({ vid, index, onExpand }) => {
           </div>
         </div>
 
-        {/* Corner Accent */}
         <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/20 group-hover:border-brand-teal transition-colors z-30" />
       </div>
     </motion.div>
