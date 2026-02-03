@@ -98,9 +98,6 @@ const Footer = () => {
               </span>
             </div>
             <div className="h-4 w-px bg-white/5 hidden md:block" />
-            <span className="text-white/10 hover:text-brand-teal transition-colors cursor-default text-[8px] font-black uppercase tracking-[0.4em]">
-              FORGED BY ANTIGRAVITY
-            </span>
           </div>
         </div>
       </div>
