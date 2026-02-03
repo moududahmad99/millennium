@@ -4,6 +4,7 @@ import Hero from '../../components/Hero';
 import Portfolio from '../../components/Portfolio';
 import Memberships from '../../components/Memberships';
 import Reviews from '../../components/Reviews';
+import Owner from '../../components/Owner';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <Hero />
 
       {/* Visual Transition */}
-      <div className="py-40 flex flex-col items-center relative overflow-hidden">
+      <div className="py-20 flex flex-col items-center relative overflow-hidden">
         <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/5 -translate-y-1/2" />
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -22,6 +23,13 @@ const Home = () => {
             <div className="w-2 h-2 bg-brand-teal animate-pulse" />
           </div>
         </motion.div>
+      </div>
+
+      {/* Founder Section */}
+      <Owner />
+
+      <div className="py-20 flex flex-col items-center relative overflow-hidden opacity-50">
+        <div className="h-40 w-[1px] bg-gradient-to-b from-brand-teal/50 to-transparent" />
       </div>
 
       <Portfolio previewOnly={true} />

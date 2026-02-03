@@ -54,9 +54,9 @@ const Hero = () => {
               UNLEASH
             </h2>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display font-black text-white leading-[0.85] mb-8 flex flex-col items-start italic">
-              <span className="relative z-10">MIND OVER</span>
-              <span className="text-gradient drop-shadow-[0_10px_30px_rgba(95,149,152,0.3)]">MATTER</span>
+            <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-display font-black text-white leading-[0.9] mb-8 flex flex-col items-start italic">
+              <span className="relative z-10 tracking-tighter">MILLENNIUM</span>
+              <span className="text-gradient drop-shadow-[0_10px_30px_rgba(95,149,152,0.3)] text-3xl md:text-6xl lg:text-[6.5rem] tracking-tight">Boxing & Fitness</span>
             </h1>
           </motion.div>
 
