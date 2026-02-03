@@ -10,8 +10,8 @@ const MembershipCard = ({ plan, highlight }) => {
     <motion.div
       whileHover={{ y: -15 }}
       className={`p-12 border-t-4 shadow-2xl transition-all duration-700 relative flex flex-col h-full bg-[#0a2530] border-white/5 ${highlight
-          ? 'border-brand-teal'
-          : 'border-white/10'
+        ? 'border-brand-teal'
+        : 'border-white/10'
         }`}
     >
       <div className="flex justify-between items-start mb-8">
@@ -40,8 +40,8 @@ const MembershipCard = ({ plan, highlight }) => {
       <button
         onClick={() => openCheckout(plan)}
         className={`w-full py-5 text-[11px] font-black uppercase tracking-[0.5em] transition-all duration-500 transform hover:scale-[1.05] ${highlight
-            ? 'bg-brand-teal text-brand-deep shadow-[0_10px_30px_rgba(95,149,152,0.2)]'
-            : 'border border-white/20 text-white hover:bg-white hover:text-brand-deep'
+          ? 'bg-brand-teal text-brand-deep shadow-[0_10px_30px_rgba(95,149,152,0.2)]'
+          : 'border border-white/20 text-white hover:bg-white hover:text-brand-deep'
           }`}
       >
         ACQUIRE MEMBERSHIP
@@ -95,9 +95,9 @@ const Memberships = () => {
   ];
 
   return (
-    <section id="memberships" className="py-40 bg-[#061E29] relative overflow-hidden">
+    <section id="memberships" className="py-24 bg-[#061E29] relative overflow-hidden">
       <div className="container mx-auto px-8">
-        <div className="flex flex-col items-start mb-32 space-y-6">
+        <div className="flex flex-col items-start mb-16 space-y-6">
           <div className="flex items-center gap-4">
             <div className="h-[1px] w-12 bg-brand-teal" />
             <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE INVESTMENT</span>

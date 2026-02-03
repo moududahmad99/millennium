@@ -80,7 +80,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="py-40 bg-brand-deep relative overflow-hidden">
+    <section className="py-24 bg-brand-deep relative overflow-hidden">
       {/* Background Cinematic Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none opacity-[0.02] select-none">
         <h2 className="text-[25vw] font-display font-black text-white italic whitespace-nowrap leading-none uppercase">
@@ -91,7 +91,7 @@ const Reviews = () => {
       <div className="container mx-auto px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="flex flex-col items-center text-center mb-24">
+          <div className="flex flex-col items-center text-center mb-12">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[1px] w-12 bg-brand-teal" />
               <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE SYNDICATE</span>

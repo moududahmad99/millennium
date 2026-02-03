@@ -44,7 +44,7 @@ const Portfolio = ({ previewOnly = false }) => {
   const videos = previewOnly ? allVideos.slice(0, 4) : allVideos;
 
   return (
-    <section id="portfolio" className="py-40 bg-[#061E29] relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-[#061E29] relative overflow-hidden">
       {/* Background Decor */}
       {!previewOnly && (
         <h2 className="absolute top-20 right-[-5%] text-[15rem] md:text-[25rem] font-display font-black text-white/[0.02] leading-none uppercase italic select-none pointer-events-none">
@@ -53,7 +53,7 @@ const Portfolio = ({ previewOnly = false }) => {
       )}
 
       <div className="container mx-auto px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-32 space-y-12 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 space-y-12 md:space-y-0">
           <div className="max-w-xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[1px] w-12 bg-brand-teal" />

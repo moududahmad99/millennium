@@ -14,7 +14,7 @@ const Owner = () => {
   const rotateX = useTransform(scrollYProgress, [0, 1], [5, -5]);
 
   return (
-    <section ref={containerRef} className="py-40 bg-brand-deep relative overflow-hidden flex items-center min-h-[90vh]">
+    <section ref={containerRef} className="py-24 bg-brand-deep relative overflow-hidden flex items-center min-h-[70vh]">
       {/* 3D Background Text */}
       <motion.div
         style={{ y: y1 }}
