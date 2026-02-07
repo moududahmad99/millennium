@@ -48,7 +48,7 @@ const Portfolio = ({ previewOnly = false }) => {
       {/* Background Decor */}
       {!previewOnly && (
         <h2 className="absolute top-20 right-[-5%] text-[15rem] md:text-[25rem] font-display font-black text-white/[0.05] leading-none uppercase italic select-none pointer-events-none">
-          REELS
+          BOXING
         </h2>
       )}
 
