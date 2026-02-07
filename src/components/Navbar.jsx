@@ -166,7 +166,7 @@ const Navbar = () => {
                   <div className="space-y-2">
                     <span className="text-[8px] font-black text-brand-teal tracking-[0.3em] uppercase block">Connect</span>
                     <div className="flex gap-4">
-                      <a href="https://www.instagram.com/millenniumboxingbronx/" className="text-brand-light/40 hover:text-brand-teal transition-colors">
+                      <a href="https://www.instagram.com/millennium_boxingfitness_gym/" className="text-brand-light/40 hover:text-brand-teal transition-colors">
                         <Instagram size={18} />
                       </a>
                       <a href="mailto:prettygoodman100@gmail.com" className="text-brand-light/40 hover:text-brand-teal transition-colors">

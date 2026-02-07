@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MapPin } from 'lucide-react';
+import { MapPin, Instagram, Facebook, Mail } from 'lucide-react';
 import bannerImg from '../assets/images/Millennium_banner.jpg';
 
 const Hero = () => {
@@ -93,10 +93,41 @@ const Hero = () => {
         <StatBox label="PRO ATHLETES" value="24" />
         <StatBox label="CHAMPIONSHIPS" value="08" />
         <StatBox label="SQ FT FACILITY" value="12K" />
+
+        {/* Social Media Icons */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1.3 }}
+          className="flex gap-3 mt-8"
+        >
+          <a
+            href="https://www.instagram.com/millennium_boxingfitness_gym/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 border border-brand-teal/30 flex items-center justify-center text-brand-teal hover:bg-brand-teal hover:text-white transition-all duration-300"
+          >
+            <Instagram size={18} />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 border border-brand-teal/30 flex items-center justify-center text-brand-teal hover:bg-brand-teal hover:text-white transition-all duration-300"
+          >
+            <Facebook size={18} />
+          </a>
+          <a
+            href="mailto:prettygoodman100@gmail.com"
+            className="w-10 h-10 border border-brand-teal/30 flex items-center justify-center text-brand-teal hover:bg-brand-teal hover:text-white transition-all duration-300"
+          >
+            <Mail size={18} />
+          </a>
+        </motion.div>
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </section>
   );
 };

@@ -23,7 +23,7 @@ const Footer = () => {
               FORGING ELITE ARCHETYPES IN THE BRONX. THE SCIENCE OF IMPACT MEETS THE ART OF DISCIPLINE.
             </p>
             <div className="flex space-x-4">
-              <SocialIcon icon={<Instagram size={16} />} href="https://www.instagram.com/millenniumboxingbronx/" />
+              <SocialIcon icon={<Instagram size={16} />} href="https://www.instagram.com/millennium_boxingfitness_gym/" />
               <SocialIcon icon={<Facebook size={16} />} href="#" />
               <SocialIcon icon={<Mail size={16} />} href="mailto:prettygoodman100@gmail.com" />
             </div>
