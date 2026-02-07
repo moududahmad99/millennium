@@ -33,11 +33,11 @@ const Contact = () => {
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-8xl font-display font-black text-white mb-8 uppercase leading-[0.85] italic tracking-tighter"
+                className="text-5xl md:text-8xl font-display font-black text-brand-light mb-8 uppercase leading-[0.85] italic tracking-tighter"
               >
                 BEGIN YOUR <br /> <span className="text-stroke">ASCENSION</span>
               </motion.h2>
-              <p className="text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-md italic border-l border-brand-teal/20 pl-6">
+              <p className="text-brand-light/40 text-lg md:text-xl font-light leading-relaxed max-w-md italic border-l border-brand-teal/20 pl-6">
                 Our doors are open for those seeking true transformation. Reach out to schedule a private tour of our facility.
               </p>
             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
               className="relative group lg:ml-auto max-w-2xl w-full"
             >
               {/* Form Container with high-end border effects */}
-              <div className="bg-[#0a2530] border border-white/5 p-8 md:p-12 relative overflow-hidden glass-morphism shadow-[0_0_100px_rgba(0,0,0,1)]">
+              <div className="bg-brand-blue border border-white/5 p-8 md:p-12 relative overflow-hidden glass-morphism shadow-[0_0_100px_rgba(0,0,0,1)]">
                 {/* Decorative Tech Corners */}
                 <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-brand-teal/20" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 border-b border-l border-brand-teal/20" />
@@ -87,7 +87,7 @@ const Contact = () => {
                         <Zap size={14} className="text-brand-teal" />
                         <label className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em]">INTEL CATEGORY</label>
                       </div>
-                      <span className="text-[8px] text-white/20 font-black uppercase tracking-widest italic">Selective Input</span>
+                      <span className="text-[8px] text-brand-light/20 font-black uppercase tracking-widest italic">Selective Input</span>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                       {['Training', 'Facility', 'Events', 'Other'].map((cat) => (
@@ -97,7 +97,7 @@ const Contact = () => {
                           onClick={() => setSelectedCategory(cat)}
                           className={`relative py-3 px-4 border transition-all duration-500 overflow-hidden group/btn ${selectedCategory === cat
                             ? 'border-brand-teal bg-brand-teal/10 text-brand-teal'
-                            : 'border-white/5 bg-white/[0.02] text-white/40 hover:border-white/20 hover:text-white'
+                            : 'border-white/5 bg-brand-light/[0.02] text-brand-light/40 hover:border-white/20 hover:text-brand-light'
                             }`}
                         >
                           <span className="relative z-10 text-[9px] font-black uppercase tracking-widest leading-none">
@@ -126,7 +126,7 @@ const Contact = () => {
                       <textarea
                         rows="4"
                         placeholder="HOW MAY WE ASSIST YOUR EVOLUTION?"
-                        className="w-full bg-white/[0.02] border border-white/5 p-6 text-white text-xs outline-none focus:border-brand-teal/30 focus:bg-white/[0.04] transition-all font-bold uppercase tracking-widest placeholder:text-white/5 resize-none h-40"
+                        className="w-full bg-brand-light/[0.02] border border-white/5 p-6 text-brand-light text-xs outline-none focus:border-brand-teal/30 focus:bg-brand-light/[0.04] transition-all font-bold uppercase tracking-widest placeholder:text-brand-light/5 resize-none h-40"
                       />
                       <div className="absolute bottom-4 right-4 text-[8px] font-mono text-white/10 uppercase tracking-[0.2em] group-focus-within/text:text-brand-teal transition-colors">
                         Protocol v1.0
@@ -192,7 +192,7 @@ const InputGroup = ({ label, placeholder, icon }) => (
   <div className="space-y-4">
     <div className="flex items-center justify-between">
       <label className="text-[10px] font-black text-brand-teal uppercase tracking-[0.4em]">{label}</label>
-      <div className="text-white/10 group-focus-within/text:text-brand-teal transition-colors">
+      <div className="text-brand-light/10 group-focus-within/text:text-brand-teal transition-colors">
         {icon}
       </div>
     </div>
@@ -200,7 +200,7 @@ const InputGroup = ({ label, placeholder, icon }) => (
       <input
         type="text"
         placeholder={placeholder}
-        className="w-full bg-transparent border-b border-white/10 py-5 text-white text-xs font-bold uppercase tracking-[0.2em] outline-none focus:border-brand-teal transition-all placeholder:text-white/5"
+        className="w-full bg-transparent border-b border-white/10 py-5 text-brand-light text-xs font-bold uppercase tracking-[0.2em] outline-none focus:border-brand-teal transition-all placeholder:text-brand-light/5"
       />
       <div className="absolute bottom-0 left-0 h-[1px] bg-brand-teal w-0 group-focus-within/input:w-full transition-all duration-700" />
     </div>
@@ -209,12 +209,12 @@ const InputGroup = ({ label, placeholder, icon }) => (
 
 const ContactInfo = ({ icon, label, value }) => (
   <div className="flex items-center space-x-6 group cursor-default">
-    <div className="w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-deep transition-all duration-700 hover:rotate-[360deg] shadow-[0_0_20px_rgba(95,149,152,0.1)]">
+    <div className="w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-deep transition-all duration-700 hover:rotate-[360deg] shadow-[0_0_20px_rgba(255,0,0,0.1)]">
       {icon}
     </div>
     <div>
-      <p className="text-white/20 text-[9px] font-black uppercase tracking-[0.4em] mb-1">{label}</p>
-      <p className="text-white font-bold text-sm md:text-base tracking-widest uppercase">{value}</p>
+      <p className="text-brand-light/20 text-[9px] font-black uppercase tracking-[0.4em] mb-1">{label}</p>
+      <p className="text-brand-light font-bold text-sm md:text-base tracking-widest uppercase">{value}</p>
     </div>
   </div>
 );

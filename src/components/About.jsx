@@ -5,7 +5,7 @@ import aboutImg from '../assets/images/Millennium .jpg';
 
 const About = () => {
   return (
-    <div className="bg-[#061E29] pt-8 pb-20 overflow-hidden">
+    <div className="bg-brand-deep pt-8 pb-20 overflow-hidden">
       {/* Hero Section of About */}
       <section className="relative py-24 px-8 border-b border-white/5">
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -22,14 +22,14 @@ const About = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="text-6xl md:text-8xl font-display font-black text-white italic tracking-tighter leading-none mb-12 uppercase"
+                className="text-6xl md:text-8xl font-display font-black text-brand-light italic tracking-tighter leading-none mb-12 uppercase drop-shadow-xl"
               >
-                FORGED IN <br /> <span className="text-stroke">THE BRONX</span>
+                FORGED IN <br /> <span className="text-stroke drop-shadow-[0_0_10px_rgba(255,0,0,0.8)]">THE BRONX</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="text-white/40 text-xl font-light leading-relaxed mb-10 max-w-xl"
+                className="text-brand-light/80 text-xl font-light leading-relaxed mb-10 max-w-xl"
               >
                 Millennium Boxing & Fitness isn't just a gymnasium. It's a sanctuary for those who refuse to be average. Since 2024, we've been distilling boxing heritage into a high-performance science.
               </motion.p>
@@ -39,7 +39,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="relative z-10 border border-brand-teal/20 p-4 bg-brand-deep shadow-[0_0_100px_rgba(95,149,152,0.1)]"
+                className="relative z-10 border border-brand-teal p-4 bg-black shadow-[0_0_100px_rgba(255,0,0,0.2)]"
               >
                 <img
                   src={aboutImg}
@@ -86,7 +86,7 @@ const About = () => {
 
       {/* Philosophy Callout */}
       <section className="py-20 bg-brand-deep relative border-y border-white/5">
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#5F9598 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#FF0000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="container mx-auto px-8 max-w-5xl text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -94,7 +94,7 @@ const About = () => {
             className="space-y-12"
           >
             <span className="text-brand-teal/50 font-black uppercase tracking-[1em] text-xs">THE DOCTRINE</span>
-            <h2 className="text-4xl md:text-7xl font-display font-black text-white italic tracking-tighter leading-tight uppercase">
+            <h2 className="text-4xl md:text-7xl font-display font-black text-brand-light italic tracking-tighter leading-tight uppercase">
               "Victory is not a result. <br /> It is a <span className="text-brand-teal">persistent state of being</span>."
             </h2>
             <div className="flex justify-center pt-8">
@@ -111,11 +111,11 @@ const Pillar = ({ icon, title, desc }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    className="group p-10 border border-white/5 bg-[#0a2530] hover:border-brand-teal/30 transition-all duration-700"
+    className="group p-10 border border-white/5 bg-brand-blue hover:border-brand-teal/30 transition-all duration-700"
   >
     <div className="text-brand-teal mb-8 group-hover:scale-110 transition-transform duration-500">{icon}</div>
-    <h3 className="text-2xl font-display font-black text-white italic mb-4 tracking-tight uppercase">{title}</h3>
-    <p className="text-white/30 text-sm leading-relaxed font-medium uppercase tracking-widest">{desc}</p>
+    <h3 className="text-2xl font-display font-black text-brand-light italic mb-4 tracking-tight uppercase">{title}</h3>
+    <p className="text-brand-light/30 text-sm leading-relaxed font-medium uppercase tracking-widest">{desc}</p>
   </motion.div>
 );
 

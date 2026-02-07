@@ -66,7 +66,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all relative group ${location.pathname === link.path ? 'text-brand-teal' : 'text-white/50 hover:text-white'
+                className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all relative group ${location.pathname === link.path ? 'text-brand-teal' : 'text-brand-light/50 hover:text-brand-light'
                   }`}
               >
                 {link.name}
@@ -75,7 +75,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <button className="px-6 py-3 border border-brand-teal/50 text-brand-teal text-[9px] font-black uppercase tracking-[0.3em] hover:bg-brand-teal hover:text-brand-deep transition-all duration-500">
+              <button className="px-6 py-3 border border-brand-teal/50 text-brand-teal text-[9px] font-black uppercase tracking-[0.3em] hover:bg-brand-teal hover:text-white transition-all duration-500">
                 Join The Elite
               </button>
             </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
                       <span className="text-brand-teal/30 font-display font-black text-sm italic">
                         0{i + 1}
                       </span>
-                      <span className={`text-4xl font-display font-black tracking-tighter uppercase transition-colors ${location.pathname === link.path ? 'text-brand-teal italic' : 'text-white'
+                      <span className={`text-4xl font-display font-black tracking-tighter uppercase transition-colors ${location.pathname === link.path ? 'text-brand-teal italic' : 'text-brand-light'
                         }`}>
                         {link.name}
                       </span>
@@ -159,17 +159,17 @@ const Navbar = () => {
                 <div className="grid grid-cols-2 gap-8 border-t border-white/5 pt-8">
                   <div className="space-y-2">
                     <span className="text-[8px] font-black text-brand-teal tracking-[0.3em] uppercase block">Location</span>
-                    <p className="text-white/40 text-[10px] font-bold leading-relaxed uppercase">
+                    <p className="text-brand-light/40 text-[10px] font-bold leading-relaxed uppercase">
                       3448 E Tremont Ave,<br />Bronx, NY 10465
                     </p>
                   </div>
                   <div className="space-y-2">
                     <span className="text-[8px] font-black text-brand-teal tracking-[0.3em] uppercase block">Connect</span>
                     <div className="flex gap-4">
-                      <a href="https://www.instagram.com/millenniumboxingbronx/" className="text-white/40 hover:text-brand-teal transition-colors">
+                      <a href="https://www.instagram.com/millenniumboxingbronx/" className="text-brand-light/40 hover:text-brand-teal transition-colors">
                         <Instagram size={18} />
                       </a>
-                      <a href="mailto:prettygoodman100@gmail.com" className="text-white/40 hover:text-brand-teal transition-colors">
+                      <a href="mailto:prettygoodman100@gmail.com" className="text-brand-light/40 hover:text-brand-teal transition-colors">
                         <Mail size={18} />
                       </a>
                     </div>

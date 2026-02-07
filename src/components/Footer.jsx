@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#030d12] pt-24 pb-12 transition-all duration-700 relative overflow-hidden border-t border-white/5">
+    <footer className="bg-brand-deep pt-24 pb-12 transition-all duration-700 relative overflow-hidden border-t border-white/5">
       {/* Cinematic Background Text - Locked for Mobile Scaling */}
-      <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[30rem] font-display font-black text-white/[0.01] uppercase italic select-none pointer-events-none">
+      <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[30rem] font-display font-black text-brand-light/[0.01] uppercase italic select-none pointer-events-none">
         SYNDICATE
       </h2>
 
@@ -16,10 +16,10 @@ const Footer = () => {
 
           {/* Brand Identity Section */}
           <div className="flex flex-col">
-            <h3 className="text-3xl md:text-4xl font-display font-black text-white italic tracking-tighter mb-6 md:mb-8 leading-none">
+            <h3 className="text-3xl md:text-4xl font-display font-black text-brand-light italic tracking-tighter mb-6 md:mb-8 leading-none">
               MILL<span className="text-brand-teal">ENNIUM</span>
             </h3>
-            <p className="text-white/30 text-[9px] md:text-[10px] leading-relaxed mb-10 font-black max-w-xs uppercase tracking-[0.3em]">
+            <p className="text-brand-light/30 text-[9px] md:text-[10px] leading-relaxed mb-10 font-black max-w-xs uppercase tracking-[0.3em]">
               FORGING ELITE ARCHETYPES IN THE BRONX. THE SCIENCE OF IMPACT MEETS THE ART OF DISCIPLINE.
             </p>
             <div className="flex space-x-4">
@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="space-y-8">
               <div className="group cursor-default">
                 <span className="text-white/20 text-[8px] font-black uppercase tracking-[0.4em] mb-3 block group-hover:text-brand-teal transition-colors duration-500">Sanctuary Address</span>
-                <p className="text-white/60 text-[10px] md:text-xs font-bold leading-relaxed uppercase tracking-widest flex items-start gap-3">
+                <p className="text-brand-light/60 text-[10px] md:text-xs font-bold leading-relaxed uppercase tracking-widest flex items-start gap-3">
                   <MapPin size={14} className="text-brand-teal shrink-0 mt-0.5" />
                   3448 E Tremont Ave, <br />Bronx, NY 10465
                 </p>
@@ -54,7 +54,7 @@ const Footer = () => {
 
               <div className="group cursor-default">
                 <span className="text-white/20 text-[8px] font-black uppercase tracking-[0.4em] mb-3 block group-hover:text-brand-teal transition-colors duration-500">Direct Intelligence</span>
-                <p className="text-white text-base md:text-lg font-display font-black italic tracking-tight flex items-center gap-3">
+                <p className="text-brand-light text-base md:text-lg font-display font-black italic tracking-tight flex items-center gap-3">
                   <Phone size={16} className="text-brand-teal" />
                   +1 347-293-7264
                 </p>
@@ -65,7 +65,7 @@ const Footer = () => {
           {/* Intel Subscription */}
           <div className="flex flex-col">
             <h4 className="text-brand-teal font-black uppercase tracking-[0.5em] text-[9px] md:text-[10px] mb-8 md:mb-12 border-l border-brand-teal/30 pl-4">Intel Stream</h4>
-            <p className="text-white/30 text-[9px] mb-6 font-black uppercase tracking-[0.3em]">Acquire tactical alerts via encrypted mail.</p>
+            <p className="text-brand-light/30 text-[9px] mb-6 font-black uppercase tracking-[0.3em]">Acquire tactical alerts via encrypted mail.</p>
             <div className="relative group">
               <input
                 type="email"
@@ -92,7 +92,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-3 group">
-              <div className="w-1.5 h-1.5 bg-brand-teal rounded-full animate-pulse shadow-[0_0_10px_#5F9598]" />
+              <div className="w-1.5 h-1.5 bg-brand-teal rounded-full animate-pulse shadow-[0_0_10px_#ff0000]" />
               <span className="text-white/20 text-[8px] font-black uppercase tracking-[0.5em] group-hover:text-brand-teal transition-colors duration-500">
                 Outpost Status: Operational
               </span>

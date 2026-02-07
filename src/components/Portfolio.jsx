@@ -44,10 +44,10 @@ const Portfolio = ({ previewOnly = false }) => {
   const videos = previewOnly ? allVideos.slice(0, 4) : allVideos;
 
   return (
-    <section id="portfolio" className="py-24 bg-[#061E29] relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-brand-deep relative overflow-hidden">
       {/* Background Decor */}
       {!previewOnly && (
-        <h2 className="absolute top-20 right-[-5%] text-[15rem] md:text-[25rem] font-display font-black text-white/[0.02] leading-none uppercase italic select-none pointer-events-none">
+        <h2 className="absolute top-20 right-[-5%] text-[15rem] md:text-[25rem] font-display font-black text-white/[0.05] leading-none uppercase italic select-none pointer-events-none">
           REELS
         </h2>
       )}
@@ -59,7 +59,7 @@ const Portfolio = ({ previewOnly = false }) => {
               <div className="h-[1px] w-12 bg-brand-teal" />
               <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">CINEMATIC GALLERY</span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-brand-light italic tracking-tighter uppercase leading-none">
               LIVE <br /> <span className="text-stroke">MOMENTUM</span>
             </h2>
           </div>
@@ -113,7 +113,7 @@ const Portfolio = ({ previewOnly = false }) => {
                 <span className="text-brand-teal font-black text-[12px] uppercase tracking-[0.6em] hidden md:block drop-shadow-2xl">Exit Archive</span>
                 <button
                   onClick={() => setActiveVideo(null)}
-                  className="w-16 h-16 md:w-20 md:h-20 bg-brand-teal border border-brand-teal shadow-[0_0_60px_rgba(95,149,152,0.6)] rounded-full flex items-center justify-center group active:scale-95 transition-all duration-300"
+                  className="w-16 h-16 md:w-20 md:h-20 bg-brand-teal border border-brand-teal shadow-[0_0_60px_rgba(255,0,0,0.6)] rounded-full flex items-center justify-center group active:scale-95 transition-all duration-300"
                 >
                   <X size={40} className="text-brand-deep transition-transform group-hover:rotate-180 duration-500 scale-110" />
                 </button>
@@ -166,7 +166,7 @@ const VideoCard = ({ vid, index, onExpand }) => {
       transition={{ duration: 0.8, delay: index * 0.1 }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative group overflow-hidden bg-[#0a2530] border border-white/5 cursor-pointer ${index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
+      className={`relative group overflow-hidden bg-brand-blue border border-white/5 cursor-pointer ${index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
         }`}
       onClick={onExpand}
     >
@@ -184,7 +184,7 @@ const VideoCard = ({ vid, index, onExpand }) => {
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110 opacity-60 group-hover:opacity-100"
         />
 
-        <div className="absolute inset-0 z-30 bg-gradient-to-t from-brand-deep via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-8">
+        <div className="absolute inset-0 z-30 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-8">
           <div className="flex justify-between items-end">
             <div>
               <span className="text-brand-teal text-[9px] font-black uppercase tracking-[0.4em] block mb-2">

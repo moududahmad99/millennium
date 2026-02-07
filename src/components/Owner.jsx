@@ -20,7 +20,7 @@ const Owner = () => {
         style={{ y: y1 }}
         className="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none"
       >
-        <h2 className="text-[30vw] font-display font-black text-white italic whitespace-nowrap leading-none uppercase">
+        <h2 className="text-[30vw] font-display font-black text-brand-light italic whitespace-nowrap leading-none uppercase">
           VISIONARY
         </h2>
       </motion.div>
@@ -34,7 +34,7 @@ const Owner = () => {
               style={{ rotateX }}
               className="relative z-10"
             >
-              <div className="relative aspect-[3/4] md:aspect-[4/5] max-w-md mx-auto overflow-hidden border border-white/10 group shadow-[0_0_80px_rgba(95,149,152,0.1)]">
+              <div className="relative aspect-[3/4] md:aspect-[4/5] max-w-md mx-auto overflow-hidden border-2 border-brand-teal group shadow-[0_0_80px_rgba(255,0,0,0.3)]">
                 {/* Image Treatment: Sharp Laboratory Monochrome */}
                 <img
                   src={ownerImg}
@@ -45,8 +45,8 @@ const Owner = () => {
                 {/* Dynamic Blueprint Grid (Hides low-res noise with sharp patterns) */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.2]"
                   style={{
-                    backgroundImage: `linear-gradient(to right, rgba(95,149,152,0.1) 1px, transparent 1px),
-                                     linear-gradient(to bottom, rgba(95,149,152,0.1) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(to right, rgba(255,0,0,0.1) 1px, transparent 1px),
+                                     linear-gradient(to bottom, rgba(255,0,0,0.1) 1px, transparent 1px)`,
                     backgroundSize: '20px 20px'
                   }}
                 />
@@ -84,11 +84,11 @@ const Owner = () => {
                 <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE FOUNDER</span>
               </div>
 
-              <h2 className="text-5xl md:text-9xl font-display font-black text-white italic tracking-tighter uppercase leading-[0.8]">
+              <h2 className="text-5xl md:text-9xl font-display font-black text-brand-light italic tracking-tighter uppercase leading-[0.8]">
                 OFACIO <br /> <span className="text-stroke">FALCON</span>
               </h2>
 
-              <p className="text-white/50 text-xl font-light leading-relaxed max-w-xl italic border-l border-brand-teal/30 pl-8">
+              <p className="text-brand-light/90 text-xl font-light leading-relaxed max-w-xl italic border-l-4 border-brand-teal pl-8">
                 "Millennium isn't just a gym; it's a testament to the fact that with enough discipline, anyone can forge their own legacy. We built this facility to be a sanctuary for those who pursue excellence in every strike."
               </p>
 
@@ -97,10 +97,10 @@ const Owner = () => {
                   Head Coach
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border border-brand-light/10 flex items-center justify-center">
                     <div className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
                   </div>
-                  <span className="text-white/30 font-black uppercase tracking-[0.3em] text-[10px]">Active Mentorship</span>
+                  <span className="text-brand-light/70 font-black uppercase tracking-[0.3em] text-[10px]">Active Mentorship</span>
                 </div>
               </div>
             </motion.div>

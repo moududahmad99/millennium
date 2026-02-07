@@ -6,7 +6,7 @@ import bannerImg from '../assets/images/Millennium_banner.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex flex-col justify-center bg-[#030d12]">
+    <section className="relative h-screen w-full overflow-hidden flex flex-col justify-center bg-black">
       {/* Cinematic Background Imagery - Custom Platform Visual */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[15000ms] scale-110"
@@ -17,9 +17,9 @@ const Hero = () => {
       />
 
       {/* Deep Shadow Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#061E29] via-[#061E29]/90 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#061E29] via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(95,149,152,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-brand-teal/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-deep via-transparent to-brand-teal/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,0,0,0.15),transparent_50%)]" />
 
       {/* Hero Content - pt-24 ensures it starts well below the Navbar logo */}
       <div className="relative z-10 container mx-auto px-8 lg:px-20 pt-24">
@@ -31,15 +31,15 @@ const Hero = () => {
             className="flex flex-col md:flex-row md:items-center gap-6 mb-8"
           >
             <div className="flex items-center gap-6">
-              <div className="h-[2px] w-16 bg-brand-teal" />
-              <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-xs md:text-sm whitespace-nowrap">
+              <div className="h-[2px] w-16 bg-brand-teal shadow-[0_0_10px_#ff0000]" />
+              <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-xs md:text-sm whitespace-nowrap drop-shadow-[0_0_5px_rgba(255,0,0,0.5)]">
                 BRONX LEGACY | EST. 2024
               </span>
             </div>
 
-            <div className="flex items-center gap-2 text-white/40">
-              <MapPin size={14} className="text-brand-teal" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">3448 E Tremont Ave, Bronx</span>
+            <div className="flex items-center gap-2 text-white">
+              <MapPin size={14} className="text-brand-teal drop-shadow-[0_0_5px_rgba(255,0,0,0.8)]" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-shadow-sm">3448 E Tremont Ave, Bronx</span>
             </div>
           </motion.div>
 
@@ -50,13 +50,13 @@ const Hero = () => {
             className="relative"
           >
             {/* Background Text Stroke */}
-            <h2 className="absolute -top-10 -left-4 text-8xl md:text-[10rem] font-display font-black text-white/[0.03] leading-none whitespace-nowrap pointer-events-none uppercase italic">
+            <h2 className="absolute -top-10 -left-4 text-8xl md:text-[10rem] font-display font-black text-transparent stroke-white/10 leading-none whitespace-nowrap pointer-events-none uppercase italic opacity-20" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.1)' }}>
               UNLEASH
             </h2>
 
             <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-display font-black text-white leading-[0.9] mb-8 flex flex-col items-start italic">
-              <span className="relative z-10 tracking-tighter">MILLENNIUM</span>
-              <span className="text-gradient drop-shadow-[0_10px_30px_rgba(95,149,152,0.3)] text-3xl md:text-6xl lg:text-[6.5rem] tracking-tight">Boxing & Fitness</span>
+              <span className="relative z-10 tracking-tighter drop-shadow-2xl">MILLENNIUM</span>
+              <span className="text-brand-teal drop-shadow-[0_0_30px_rgba(255,0,0,0.6)] text-3xl md:text-6xl lg:text-[6.5rem] tracking-tight">Boxing & Fitness</span>
             </h1>
           </motion.div>
 
@@ -64,7 +64,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-white/40 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed border-l-2 border-brand-teal/20 pl-8"
+            className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed border-l-2 border-brand-teal pl-8 shadow-[-10px_0_20px_rgba(255,0,0,0.1)]"
           >
             We don't build athletes. <span className="text-white font-medium italic">We forge archetypes.</span> Join the elite collective at the Bronx's most uncompromising combat training sanctuary.
           </motion.p>
@@ -75,7 +75,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-6"
           >
-            <Link to="/memberships" className="group relative px-10 py-5 overflow-hidden bg-brand-teal transition-all duration-500 hover:shadow-[0_0_50px_rgba(95,149,152,0.4)]">
+            <Link to="/memberships" className="group relative px-10 py-5 overflow-hidden bg-brand-teal transition-all duration-500 hover:shadow-[0_0_50px_rgba(255,0,0,0.4)]">
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <span className="relative z-10 text-brand-deep font-black uppercase tracking-[0.4em] text-xs">
                 ENTER THE RING
@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#061E29] to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent" />
     </section>
   );
 };

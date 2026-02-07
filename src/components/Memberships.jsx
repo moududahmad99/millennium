@@ -9,13 +9,13 @@ const MembershipCard = ({ plan, highlight }) => {
   return (
     <motion.div
       whileHover={{ y: -15 }}
-      className={`p-12 border-t-4 shadow-2xl transition-all duration-700 relative flex flex-col h-full bg-[#0a2530] border-white/5 ${highlight
-        ? 'border-brand-teal'
-        : 'border-white/10'
+      className={`p-12 border-t-8 shadow-2xl transition-all duration-700 relative flex flex-col h-full bg-brand-light/[0.03] border-brand-light/10 ${highlight
+        ? 'border-brand-teal shadow-[0_0_50px_rgba(255,0,0,0.15)] bg-gradient-to-b from-brand-teal/10 to-transparent'
+        : 'hover:border-brand-teal/50'
         }`}
     >
       <div className="flex justify-between items-start mb-8">
-        <h3 className="text-4xl font-display font-black text-white italic tracking-tighter">{plan.title}</h3>
+        <h3 className="text-4xl font-display font-black text-brand-light italic tracking-tighter">{plan.title}</h3>
         {highlight && (
           <span className="bg-brand-teal text-brand-deep text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1">
             ELITE CHOICE
@@ -24,7 +24,7 @@ const MembershipCard = ({ plan, highlight }) => {
       </div>
 
       <div className="flex items-baseline mb-12">
-        <span className="text-6xl font-black text-white tracking-tighter">${plan.price}</span>
+        <span className="text-6xl font-black text-brand-light tracking-tighter">${plan.price}</span>
         <span className="text-sm text-brand-teal/50 font-bold uppercase tracking-[0.3em] ml-3 italic">/ Cycle</span>
       </div>
 
@@ -32,7 +32,7 @@ const MembershipCard = ({ plan, highlight }) => {
         {plan.features.map((f, i) => (
           <li key={i} className="flex items-start space-x-4 group">
             <Check size={16} className="text-brand-teal mt-1 shrink-0" />
-            <span className="text-white/60 text-sm font-medium leading-relaxed group-hover:text-white transition-colors">{f}</span>
+            <span className="text-brand-light/80 text-sm font-medium leading-relaxed group-hover:text-brand-light transition-colors">{f}</span>
           </li>
         ))}
       </ul>
@@ -40,8 +40,8 @@ const MembershipCard = ({ plan, highlight }) => {
       <button
         onClick={() => openCheckout(plan)}
         className={`w-full py-5 text-[11px] font-black uppercase tracking-[0.5em] transition-all duration-500 transform hover:scale-[1.05] ${highlight
-          ? 'bg-brand-teal text-brand-deep shadow-[0_10px_30px_rgba(95,149,152,0.2)]'
-          : 'border border-white/20 text-white hover:bg-white hover:text-brand-deep'
+          ? 'bg-brand-teal text-brand-deep shadow-[0_10px_30px_rgba(255,0,0,0.2)]'
+          : 'border border-brand-light/30 text-brand-light hover:bg-brand-light hover:text-brand-deep font-bold'
           }`}
       >
         ACQUIRE MEMBERSHIP
@@ -95,14 +95,14 @@ const Memberships = () => {
   ];
 
   return (
-    <section id="memberships" className="py-24 bg-[#061E29] relative overflow-hidden">
+    <section id="memberships" className="py-24 bg-brand-deep relative overflow-hidden">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-start mb-16 space-y-6">
           <div className="flex items-center gap-4">
             <div className="h-[1px] w-12 bg-brand-teal" />
             <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE INVESTMENT</span>
           </div>
-          <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter">
+          <h2 className="text-5xl md:text-8xl font-display font-black text-brand-light italic tracking-tighter">
             CHOOSE YOUR <br /> <span className="text-stroke">EVOLUTION</span>
           </h2>
         </div>
@@ -115,7 +115,7 @@ const Memberships = () => {
 
         {/* Decorative Quote */}
         <div className="mt-24 text-center">
-          <p className="text-white/10 text-4xl md:text-7xl font-display font-black uppercase italic select-none">
+          <p className="text-brand-light/10 text-4xl md:text-7xl font-display font-black uppercase italic select-none">
             NO EXCUSES. NO RETREAT.
           </p>
         </div>

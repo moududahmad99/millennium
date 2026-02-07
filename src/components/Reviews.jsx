@@ -82,22 +82,23 @@ const Reviews = () => {
   return (
     <section className="py-24 bg-brand-deep relative overflow-hidden">
       {/* Background Cinematic Text */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none opacity-[0.02] select-none">
-        <h2 className="text-[25vw] font-display font-black text-white italic whitespace-nowrap leading-none uppercase">
-          RESPECT
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none opacity-[0.07] select-none">
+        <h2 className="text-[30vw] font-display font-black text-white italic whitespace-nowrap leading-none uppercase">
+          BOXING
         </h2>
       </div>
 
       <div className="container mx-auto px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="flex flex-col items-center text-center mb-12">
-            <div className="flex items-center gap-4 mb-6">
+          {/* Header */}
+          <div className="flex flex-col items-center text-center mb-16 space-y-6">
+            <div className="flex items-center gap-4">
               <div className="h-[1px] w-12 bg-brand-teal" />
               <span className="text-brand-teal font-black uppercase tracking-[0.5em] text-[10px]">THE SYNDICATE</span>
               <div className="h-[1px] w-12 bg-brand-teal" />
             </div>
-            <h2 className="text-5xl md:text-8xl font-display font-black text-white italic tracking-tighter uppercase leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-brand-light italic tracking-tighter uppercase leading-none">
               MEMBER <br /> <span className="text-stroke">VERDICTS</span>
             </h2>
           </div>
@@ -133,7 +134,7 @@ const Reviews = () => {
                         data-lenis-prevent
                         className="h-full overflow-y-auto pr-4 custom-scrollbar"
                       >
-                        <p className="text-white/80 text-lg md:text-xl font-light italic leading-relaxed">
+                        <p className="text-brand-light/80 text-lg md:text-xl font-light italic leading-relaxed">
                           "{reviews[index].content}"
                         </p>
                       </div>
@@ -142,7 +143,7 @@ const Reviews = () => {
                     <div className="flex items-center gap-6 mt-auto pt-6 border-t border-white/5">
                       <div className="h-px w-12 bg-brand-teal" />
                       <div>
-                        <h4 className="text-white font-display font-black text-xl md:text-2xl uppercase tracking-tighter italic whitespace-nowrap">
+                        <h4 className="text-brand-light font-display font-black text-xl md:text-2xl uppercase tracking-tighter italic whitespace-nowrap">
                           {reviews[index].name}
                         </h4>
                         <span className="text-brand-teal text-[10px] font-black uppercase tracking-widest">Verified Member</span>
@@ -173,7 +174,7 @@ const Reviews = () => {
             <div className="flex gap-4">
               <button
                 onClick={prevReview}
-                className="w-16 h-16 border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-brand-deep transition-all duration-500 group"
+                className="w-16 h-16 border border-white/10 flex items-center justify-center text-brand-light hover:bg-brand-light hover:text-brand-deep transition-all duration-500 group"
               >
                 <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
               </button>
